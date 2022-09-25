@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Сен 22 2022 г., 03:36
+-- Время создания: Сен 25 2022 г., 17:28
 -- Версия сервера: 5.5.53
 -- Версия PHP: 5.5.38
 
@@ -32,6 +32,13 @@ CREATE TABLE `likes` (
   `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Дамп данных таблицы `likes`
+--
+
+INSERT INTO `likes` (`id_like`, `id_music`, `id_user`) VALUES
+(18, 15, 14);
+
 -- --------------------------------------------------------
 
 --
@@ -54,7 +61,8 @@ CREATE TABLE `music` (
 INSERT INTO `music` (`id_music`, `name_music`, `id_user`, `path`, `likei`, `date_music`) VALUES
 (5, 'Джизус.mp3', 16, 'http://192.168.1.2/include/music/foldermore03', 0, '2022-09-12'),
 (8, 'T-Fest.mp3', 14, 'http://192.168.1.2/include/music/foldermore02', 0, '2022-09-20'),
-(9, 'InimaSalbatica.mp3', 14, 'http://192.168.1.2/include/music/foldermore02', 0, '2022-09-20');
+(15, 'InimaSalbatica.mp3', 14, 'http://192.168.1.2/include/music/foldermore02', 1, '2022-09-24'),
+(18, 'FireEscape.mp3', 15, 'http://192.168.1.2/include/music/foldermore_more', 0, '2022-09-25');
 
 -- --------------------------------------------------------
 
@@ -80,7 +88,8 @@ INSERT INTO `podpiska` (`id_podpiska`, `id_user1`, `id_user2`, `data_podpiska`) 
 (46, 14, 12, '2022-09-06'),
 (47, 14, 11, '2022-09-06'),
 (48, 15, 14, '2022-09-06'),
-(49, 14, 16, '2022-09-12');
+(49, 14, 16, '2022-09-12'),
+(58, 16, 14, '2022-09-25');
 
 -- --------------------------------------------------------
 
@@ -110,8 +119,9 @@ INSERT INTO `users` (`id`, `unique_id`, `name`, `email`, `encrypted_password`, `
 (12, '590b275ea73a24.24733871', 'More', 'mbakanova2016@yandex.ru', 'qT6xz/3fMFdubeWvGI7SiKrseZNlNTgyNWIzODAw', 'e5825b3800', '2017-05-04 16:06:38', NULL, 'folderMore', ''),
 (13, '5920964c5bce45.45330884', 'MVB', 'mb@ya.ru', 'TQdrJ4LHfOz+2aW5GV1kV52x2ukxOGI0YzY3ZjA0', '18b4c67f04', '2017-05-20 22:17:32', NULL, 'folderMVB', ''),
 (14, '6317986cac6c73.83311573', 'more02', 'mbaka@yandex.ru', 'da/44h24dTLP0vEGg4TdfcFIv2M1MWE0ZmJhODlh', '51a4fba89a', '2022-09-06 21:58:52', NULL, 'foldermore02', ''),
-(15, '6317a63d13c866.76489093', 'more_more', 'mba@ya.ru', 'KB5C9z9o3arO0xm11yJlgexl+mExNWFjZWEwN2Fk', '15acea07ad', '2022-09-06 22:57:49', NULL, 'foldermba@ya.ru', ''),
-(16, '631f6f4b53c937.68411058', 'more03', 'mb@yandex.ru', '5ckwjyYrIHc+Fed34pKsX10AcQ1hZjdlYzlhNzAy', 'af7ec9a702', '2022-09-12 20:41:31', NULL, 'foldermore03', '');
+(15, '6317a63d13c866.76489093', 'more_more', 'mba@ya.ru', 'KB5C9z9o3arO0xm11yJlgexl+mExNWFjZWEwN2Fk', '15acea07ad', '2022-09-06 22:57:49', NULL, 'foldermore_more', ''),
+(16, '631f6f4b53c937.68411058', 'more03', 'mb@yandex.ru', '5ckwjyYrIHc+Fed34pKsX10AcQ1hZjdlYzlhNzAy', 'af7ec9a702', '2022-09-12 20:41:31', NULL, 'foldermore03', ''),
+(17, '63303c6adefc64.87963762', 'moremore', 'mb@y.ru', 'IR9Al/ME0e/Dq3mgiveSTGvcukg0ZTZjOGE0Nzkz', '4e6c8a4793', '2022-09-25 14:32:58', NULL, 'foldermoremore', '');
 
 --
 -- Индексы сохранённых таблиц
@@ -157,22 +167,22 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `likes`
 --
 ALTER TABLE `likes`
-  MODIFY `id_like` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_like` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT для таблицы `music`
 --
 ALTER TABLE `music`
-  MODIFY `id_music` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_music` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 --
 -- AUTO_INCREMENT для таблицы `podpiska`
 --
 ALTER TABLE `podpiska`
-  MODIFY `id_podpiska` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id_podpiska` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 --
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- Ограничения внешнего ключа сохраненных таблиц
 --
