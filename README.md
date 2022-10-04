@@ -25,8 +25,4 @@
 * PHP
 * OpenServer
 ---
-# Developers
-* Баканова М.В.
----
-
 
