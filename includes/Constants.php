@@ -1,9 +1,9 @@
 <?php
 
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', '');
-define('DB_HOST', '192.168.1.2');
-define('DB_NAME', 'android_api');
+define('DB_USERNAME', 'mbakanova2');
+define('DB_PASSWORD', 'More991326_');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'mbakanova2');
 
 define('USER_CREATED', 101);
 define('USER_EXIST', 102);

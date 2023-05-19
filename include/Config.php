@@ -1,8 +1,8 @@
 <?php
  
 
-define("DB_HOST", "192.168.1.2");
-define("DB_USER", "root");
-define("DB_PASSWORD", "");
-define("DB_DATABASE", "android_api");
+define("DB_HOST", "localhost");
+define("DB_USER", "mbakanova2");
+define("DB_PASSWORD", "More991326_");
+define("DB_DATABASE", "mbakanova2");
 ?>
